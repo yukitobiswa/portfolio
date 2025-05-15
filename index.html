@@ -1,71 +1,111 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>飛澤 佑季 ポートフォリオ</title>
+    <title>Yuki Tobisawa Style Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <section class="profile">
-        <img src="tobisawa.jpg" alt="山田タロウ" class="profile-img">
-        <div class="profile-text">
-            <h1>飛澤 佑季</h1>
-            <p class="sub-name">:: Yuuki tobisawa</p>
-            <p>「アイデアを形にする」お手伝いをします。お気軽にご相談ください。</p>
-            <p>東京を拠点に活動するフリーランスのプログラマーです。これまでのプロジェクトでは、企業サイトから個人ブログ、ECサイトまで幅広く対応し、ユーザーにとって快適な体験を提供することに力を注いできました。</p>
-            <p>最新の技術を取り入れ、常に新しい挑戦を続けることが私の強みです。</p>
-            <div class="sns-links">
-                <a href="#">研究室</a> / 
-                <a href="#">Instagram</a> / 
-                <a href="#">Facebook</a>
-            </div>
+    <!-- スプラッシュ画面 -->
+    <div id="splash">
+        <div class="splash-content">
+            <h1>YUKI TOBISAWA</h1>
+            <p>PORTFOLIO</p>
         </div>
-    </section>
+    </div>
 
-    <section class="works">
-        <h2>WORKS</h2>
-        <div class="works-list">
-            <div class="work-item">
-                <img src="work1.jpg" alt="">
-                <p>企業向けウェブサイト開発（株式会社〇〇〇〇）</p>
+    <!-- メインコンテンツには最初から active -->
+    <div id="main-content" class="main-content active">
+
+        <section id="top" class="top">
+            <div class="top-inner">
+                <img src="tobisawa.jpg" alt="山田タロウ" class="top-img">
+                <div class="top-text">
+                    <h1>飛澤 佑季</h1>
+                    <p class="sub-name">Yuuki tobisawa</p>
+                    <p>立命館大学 情報理工学部 社会知能研究室 4回生</p>
+                    <div class="sns-links">
+                        研究室は<a href="https://www.si-lab.org/index-ja.html" target="_blank" rel="noopener">こちら</a>
+                    </div>
+                </div>
             </div>
-            <div class="work-item">
-                <img src="work2.jpg" alt="">
-                <p>企業向けウェブサイト開発（株式会社〇〇〇〇）</p>
+        </section>
+
+        <section id="profile" class="profile">
+            <h2>Profile</h2>
+            <div class="works-list">
+                <div class="work-item">
+                    <img src="work1.jpg" alt="">
+                    <p>はじめまして。飛澤佑季です。立命館大学・情報理工学部・社会知能研究室でサービスコンピューティングに関しての研究をしています！
+
+                    </p>
+                </div>
+
             </div>
-            <div class="work-item">
-                <img src="work3.jpg" alt="">
-                <p>企業向けウェブサイト開発（株式会社〇〇〇〇）</p>
+        </section>
+
+        <section id="research" class="research">
+            <div class="research-top">
+                <h2>Research</h2>
             </div>
-            <div class="work-item">
-                <img src="work4.jpg" alt="">
-                <p>企業向けウェブサイト開発（株式会社〇〇〇〇）</p>
+
+            <div class="research-title">
+                <p>LLMマルチエージェントによるWebサービス合成</p>
             </div>
-        </div>
-    </section>
 
-    <section class="skills">
-        <h2>SKILLS</h2>
-        <p>私のスキルセットは、フロントエンドおよびバックエンドの開発から、レスポンシブデザイン、CMS導入・カスタマイズ、そしてプロジェクト管理に至るまで多岐にわたります。</p>
-        <p>クライアントのニーズに応じた柔軟な対応と、使いやすいシステムの提供を常に心がけています。</p>
+            <div class="research-flex">
+                <!-- 1つ目：画像左、テキスト右 -->
+                <div class="research-block img-left">
+                    <div class="research-image">
+                        <img src="API.png" alt="API構成図">
+                    </div>
+                    <div class="research-text">
+                        <h3>背景</h3>
+                        <p>近年、Webサービスは私たちの生活に深く浸透しており、開発効率の向上や新たな価値創出を目的として、複数のWebサービスを組み合わせた複合サービスの構築が一般的となっている。
+                        しかし、世界中で提供される膨大な数のWebサービスの中から、目的に適合するサービスを選定し、適切に組み合わせることは、従来の手作業や人手によるアプローチでは非常に困難である。
+                        さらに、サービス同士の相互運用性や適合性、QoS（Quality of Service）やセキュリティ、信頼性といった非機能要件を考慮したサービス選定と組み合わせも、人間の判断だけでは限界がある。
+                        そのため、複合サービスを効率的かつ最適に構築するには、サービス発見、選定、組み合わせを自動的に支援する技術が必要になってくる。
+                    </div>
+                </div>
 
-        <div class="skill-item">
-            <h3>01 フロントエンド開発</h3>
-            <p>モダンなフロントエンド技術を用いて、視覚的に魅力的でユーザーにとって直感的なインターフェースを構築します。ReactやVue.jsなどのフレームワークを得意としています。</p>
-        </div>
+                <!-- 2つ目：テキスト左、画像右 -->
+                <div class="research-block img-right">
+                    <div class="research-image">
+                        <img src="multi_agent.png" alt="マルチエージェント">
+                    </div>
+                    <div class="research-text">
+                        <h3>マルチエージェントによる推薦</h3>
+                        <p>本研究では、マルチエージェントを用いてWebサービス推薦を行う。
+                            従来の研究では従来のサービス合成では、ユーザーが自身の目的や要求を形式的な論理式（時相論理や述語論理）で記述する必要があった。これはユーザにとって非常に困難な問題であり、サービス合成の障壁となっていた。そこで自然言語で記述することができる大規模言語モデル（以下LLM）を用いて、ユーザが容易に要求を記述できるようになると考えた。</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="skill-item">
-            <h3>02 バックエンド開発</h3>
-            <p>安全でスケーラブルなバックエンドシステムを構築することができます。Node.jsやPHP、MySQLなどを使用し、信頼性の高いサーバーサイドの機能を実装します。</p>
-        </div>
 
-        <div class="skill-item">
-            <h3>03 CMS導入とカスタマイズ</h3>
-            <p>WordPressやその他のCMSの導入・カスタマイズを行い、クライアントの要件に合った管理システムを提供します。使いやすさとメンテナンスのしやすさを重視します。</p>
-        </div>
-    </section>
+            <div class="research-item">
+                <h3>01 フロントエンド開発</h3>
+                <p>モダンなフロントエンド技術を用いて、視覚的に魅力的でユーザーにとって直感的なインターフェースを構築します。ReactやVue.jsなどのフレームワークを得意としています。</p>
+            </div>
+            <div class="research-item">
+                <h3>02 バックエンド開発</h3>
+                <p>安全でスケーラブルなバックエンドシステムを構築することができます。Node.jsやPHP、MySQLなどを使用し、信頼性の高いサーバーサイドの機能を実装します。</p>
+            </div>
 
+            <div class="research-item">
+                <h3>03 CMS導入とカスタマイズ</h3>
+                <p>WordPressやその他のCMSの導入・カスタマイズを行い、クライアントの要件に合った管理システムを提供します。使いやすさとメンテナンスのしやすさを重視します。</p>
+            </div>
+
+        </section>
+
+        < </section>
+
+            <script src="script.js"></script>
 </body>
+
+
 </html>
