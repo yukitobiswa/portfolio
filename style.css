@@ -231,6 +231,7 @@
     flex: 1 1 45%;
 }
 
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .research-block {
