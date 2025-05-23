@@ -24,11 +24,13 @@
 .splash-content h1 {
     font-size: 3rem;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .splash-content p {
     font-size: 1.5rem;
     color: #007acc;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main-content {
@@ -287,7 +289,7 @@
 }
 
 #research .research-image img {
-    width: 300px;
+    width: 500px;
     height: auto;
     display: inline-block;
 }
@@ -400,4 +402,44 @@
     transform: translateX(0);
     opacity: 1;
   }
+  
+/* Language Switcher Styles */
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for visibility */
+    padding: 8px 12px;
+    border-radius: 4px;
+    z-index: 1001; /* Ensure it's above splash screen */
+    font-family: Arial, Helvetica, sans-serif; /* Specify common sans-serif fonts */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.language-switcher a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #888; /* Default (inactive) color */
+    transition: color 0.3s ease;
+    padding: 0 5px; /* Add some padding around JP/EN */
+    font-size: 14px; /* Specify fixed font size */
+}
+
+.language-switcher a:hover {
+    color: #005f99; /* Darker blue for hover, distinct from active */
+}
+
+.language-switcher span {
+    margin: 0 3px; /* Reduced margin for tighter look */
+    color: #bbb; /* Lighter separator */
+}
+
+.language-switcher a.active-lang {
+    color: #007acc; /* Active language color (bright blue) */
+    cursor: default; /* Indicate it's not clickable */
+}
+
+.language-switcher a.active-lang:hover {
+    color: #007acc; /* Keep active color on hover */
+}
   

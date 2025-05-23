@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuki Tobisawa Style Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="language-switcher">
+        <a href="index.html" class="lang-jp">JP</a>
+        <span>|</span>
+        <a href="index_en.html" class="lang-en active-lang">EN</a>
+    </div>
+
+    <div id="splash">
+        <div class="splash-content">
+            <h1>YUKI TOBISAWA</h1>
+            <p>PORTFOLIO</p>
+        </div>
+    </div>
+
+    <!-- Main content is active from the beginning -->
+    <div id="main-content" class="main-content active">
+
+        <section id="top" class="top">
+            <div class="top-inner">
+                <img src="image/tobisawa.jpg" alt="Yuki Tobisawa" class="top-img">
+                <div class="top-text">
+                    <h1>Yuki Tobisawa</h1>
+                    <p class="sub-name">Yuuki tobisawa</p>
+                    <p>Ritsumeikan University, College of Information Science and Engineering, Social Intelligence Laboratory, 4th year</p>
+                    <div class="sns-links">
+                        <a href="https://www.si-lab.org/index-en.html" target="_blank" rel="noopener">Laboratory</a>
+                        <a href="https://github.com/yukitobiswa" target="_blank" rel="noopener"
+                            style="margin-left: 10px;"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="profile">
+            <h1>Profile</h1>
+            <div class="profile-list">
+                <div class="profile-item">
+                    <div class="profile-text">
+                        <h3>About Me</h3>
+                        <p>Nice to meet you. I'm Yuki Tobisawa. Born on January 8, 2004. At university, I am researching the field of service computing.</p>
+                        <p>In addition, I have experience with long-term internships and team development projects.</p>
+                    </div>
+
+                    <div class="profile-text">
+                        <h3>Hobbies & Interests</h3>
+                        <ul>
+                            <li>Weight Training</li>
+                            <li>Eating</li>
+                            <li>Traveling</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="research" class="research">
+            <div class="research-top">
+                <h2>Research</h2>
+            </div>
+
+            <div class="research-title">
+                <p>Web Service Composition by LLM Multi-Agent</p>
+            </div>
+
+            <div class="research-flex">
+                <!-- First: Image left, text right -->
+                <div class="research-block img-left">
+                    <div class="research-image slide-in-left">
+                        <img src="image/API_en.png" alt="API Configuration Diagram">
+                    </div>
+                    <div class="research-text">
+                        <h3>Background</h3>
+                        <p>In recent years, Web services have become deeply integrated into our lives, and the construction of composite services by combining multiple Web services has become common for the purpose of improving development efficiency and creating new value.
+                            However, selecting services that meet the objectives from the vast number of Web services provided worldwide and combining them appropriately is extremely difficult with conventional manual work and human-dependent approaches.
+                            Furthermore, there are limitations to human judgment alone when considering service selection and combination that take into account interoperability and compatibility between services, QoS (Quality of
+                            Service), security, and reliability, as well as other non-functional requirements.
+                            Therefore, to efficiently and optimally construct composite services, technology that automatically supports service discovery, selection, and combination is necessary.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Second: Text left, image right -->
+                <div class="research-block img-right">
+                    <div class="research-image slide-in-right">
+                        <img src="image/multi_agent_en.png" alt="Multi-agent">
+                    </div>
+                    <div class="research-text">
+                        <h3>Recommendation by Multi-Agent</h3>
+                        <p>In this research, we use a multi-agent system to recommend Web services.
+                            In conventional service composition, users had to describe their objectives and requirements using formal logical expressions (temporal logic or predicate logic). This was a very difficult problem for users and a barrier to service composition.
+                            Therefore, we believed that by using a large language model (LLM) that can be described in natural language, users would be able to easily describe their requirements.
+                            However, in service composition by a single agent, the range of target services is extensive, so an LLM based on general knowledge tends to have a shallow understanding of specialized knowledge, and there is a problem of insufficient information regarding service technical specifications and execution environments. Although this problem can be partially improved by adding specialized knowledge to the prompt, as the number and complexity of services increase, new problems arise: prompt inflation and, as a result, character limits.
+                            In this research, to solve these problems, we introduce a multi-agent system composed of multiple LLM agents. By specializing each agent in a specific domain, we aim to alleviate prompt constraints and achieve more accurate service recommendations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="works-top">
+                <h1>Work</h1>
+            </div>
+
+            <h2>Diary Board</h2>
+            <div class="works-flex">
+                <div class="works-block img-right">
+                    <div class="works-image slide-in-right">
+                        <img src="image/diary_board.png" alt="Diary Board">
+                    </div>
+                    <div class="works-description">
+                        <p>Diary Board is a multilingual educational support tool designed to prevent foreign children who have come to Japan involuntarily from becoming isolated in Japanese school settings.</p>
+                        <p>It aims to create an inclusive classroom environment by removing barriers caused by cultural backgrounds and language differences and promoting interaction among children.</p>
+                        <h3>Background</h3>
+                        <p>We actually visited the Shiga International Association and interviewed foreigners living in Shiga Prefecture and association staff about their concerns. Based on the issues that emerged, we conducted group development with the aim of resolving them through a Web service.
+                        </p>
+                        <h3>Features</h3>
+                        <p>Diary Board has the following features:</p>
+                        <ul>
+                            <li>Login</li>
+                            <li>Diary function</li>
+                            <li>Quiz function</li>
+                            <li>Group management function</li>
+                            <li>Usage promotion function</li>
+                        </ul>
+                        <h3>URL</h3>
+                        <a href="https://si-lab.org/diaryboard/" target="_blank"
+                            rel="noopener">https://si-lab.org/diaryboard/</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="skills-top">
+                <h1>Skills</h1>
+            </div>
+
+            <div class="skills-list">
+                <div class="skills-item">
+                    <div class="skills-text">
+                        <h3>python</h3>
+                        <h3>java</h3>
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
