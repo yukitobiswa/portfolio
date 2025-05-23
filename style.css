@@ -175,10 +175,6 @@
     margin-top: 20px; /* 見出しとの間に少しマージンを追加 */
 }
 
-#skills .skills-item {
-    /* 必要であればスタイル追加 */
-}
-
 #skills .skills-text {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3列表示 */
