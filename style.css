@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('background.jpg') no-repeat center center / cover;
+    background: url('image/background.jpg') no-repeat center center / cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -67,7 +67,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('background.jpg');
+    background-image: url('image/background.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(1px);
@@ -114,12 +114,16 @@
 }
 
 
-.profile {
+/* profile section */
+#profile {
     padding: 50px;
     background: #fafafa;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-.profile h2 {
+#profile h1 {
     text-align: center;
     display: inline-block;
     border-bottom: 10px solid #007acc;
@@ -127,29 +131,29 @@
     margin: 0 auto;
 }
 
-.profile-list {
+#profile .profile-list { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.profile-item img {
-
+#profile .profile-item img { 
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.profile-item p {
-    margin-top: 8px;
-}
 
-
-.research {
+/* skills section*/
+#skills {
     padding: 50px;
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-.research-top h2 {
+#skills .skills-top h1 {
     text-align: center;
     display: inline-block;
     border-bottom: 10px solid #007acc;
@@ -157,34 +161,134 @@
     margin: 0 auto;
 }
 
-.research-image {
+#skills h1 {
+    text-align: center;
+    display: block; 
+    border-bottom: 10px solid #007acc;
+    padding-bottom: 4px;
+    margin: 0 auto; 
+}
+
+#skills .works-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* work section*/
+#works {
+    padding: 50px;
+    background: #fafafa;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#works h1 {
+    text-align: center;
+    display: inline-block;
+    border-bottom: 10px solid #007acc;
+    padding-bottom: 4px;
+    margin: 0 auto;
+}
+
+#works .works-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#works .work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#works .work-item p {
+    margin-top: 8px;
+}
+
+#works .works-image {
+    text-align: center;
+}
+
+#works .works-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Works Flex Layout (similar to research) */
+#works .works-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+#works .works-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#works .works-block.img-right .works-image {
+    order: 2;
+    flex: 1 1 45%;
+}
+
+#works .works-block.img-right .works-description {
+    order: 1;
+    flex: 1 1 45%;
+}
+
+/* research section */
+#research {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#research .research-top h2 {
+    text-align: center;
+    display: inline-block;
+    border-bottom: 10px solid #007acc;
+    padding-bottom: 4px;
+    margin: 0 auto;
+}
+
+#research .research-image {
     text-align: center;
     margin: 40px 0;
 }
 
-.research-image img {
+#research .research-image img {
     width: 300px;
     height: auto;
     display: inline-block;
 }
 
-.research-title {
+#research .research-title {
     text-align: center;
     background: #e6f0fa;
     padding: 30px;
     font-size: 24px;
     font-weight: bold;
-
 }
-.research-item {
+
+#research .research-item {
     margin-top: 30px;
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 8px;
 }
 
-/* 共通横並びレイアウト */
-.research-flex {
+#research .research-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -193,7 +297,7 @@
     margin: 40px 0;
 }
 
-.research-block {
+#research .research-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -201,45 +305,64 @@
     width: 100%;
 }
 
-.research-block.img-left .research-image {
+#research .research-block.img-left .research-image {
     order: 1;
 }
 
-.research-block.img-left .research-text {
+#research .research-block.img-left .research-text {
     order: 2;
 }
 
-.research-block.img-right .research-image {
+#research .research-block.img-right .research-image {
     order: 2;
 }
 
-.research-block.img-right .research-text {
+#research .research-block.img-right .research-text {
     order: 1;
 }
 
-.research-image {
+#research .research-image { 
     flex: 1 1 45%;
     text-align: center;
 }
 
-.research-image img {
+#research .research-image img { 
     max-width: 100%;
     height: auto;
 }
 
-.research-text {
+#research .research-text {
     flex: 1 1 45%;
 }
 
-
-/* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .research-block {
+    #research .research-block {
         flex-direction: column;
     }
 
-    .research-block .research-image,
-    .research-block .research-text {
+    #research .research-block .research-image,
+    #research .research-block .research-text {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    #skills .research-block {
+        flex-direction: column;
+    }
+
+    #skills .research-block .research-image,
+    #skills .research-block .research-text {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    /* Responsive for Works Section */
+    #works .works-block {
+        flex-direction: column;
+    }
+
+    #works .works-block .works-image,
+    #works .works-block .works-description {
         flex: 1 1 100%;
         text-align: center;
     }
