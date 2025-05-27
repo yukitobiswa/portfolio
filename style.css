@@ -455,4 +455,25 @@
 .language-switcher a.active-lang:hover {
     color: #007acc; /* Keep active color on hover */
 }
-  
+  @media (max-width: 768px) {
+    #works .works-block {
+        flex-direction: column; /* 横並びから縦並びに変更 */
+    }
+
+    #works .works-block.img-right .works-image,
+    #works .works-block.img-right .works-description {
+        order: unset;      /* スマホでは順序制御を解除（自然な順で） */
+        flex: 1 1 100%;    /* 幅を100%にすることで縦並びにフィット */
+        text-align: center;
+    }
+
+    #works .works-image img {
+        width: 100%;       /* モバイルでは画面幅に合わせる */
+        max-width: 350px;  /* 最大サイズは維持 */
+        height: auto;
+    }
+
+    #works .works-description {
+        padding: 10px;     /* 上下余白追加 */
+    }
+}
