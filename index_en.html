@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuki Tobisawa Style Portfolio</title>
+    <title>Yuki Tobisawa | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -24,7 +24,17 @@
         </div>
     </div>
 
-    <!-- Main content is active from the beginning -->
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#works">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
     <div id="main-content" class="main-content active">
 
         <section id="top" class="top">
@@ -32,142 +42,266 @@
                 <img src="image/tobisawa.jpg" alt="Yuki Tobisawa" class="top-img">
                 <div class="top-text">
                     <h1>Yuki Tobisawa</h1>
-                    <p class="sub-name">Yuuki tobisawa</p>
-                    <p>Ritsumeikan University, College of Information Science and Engineering, Social Intelligence Laboratory, 4th year</p>
+                    <p>Ritsumeikan University, College of Information Science and Engineering, Social Intelligence Lab, 4th Year</p>
                     <div class="sns-links">
-                        <a href="https://www.si-lab.org/index-en.html" target="_blank" rel="noopener">Laboratory</a>
-                        <a href="https://github.com/yukitobiswa" target="_blank" rel="noopener"
-                            style="margin-left: 10px;"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.si-lab.org/index-ja.html" target="_blank" rel="noopener"><i
+                                class="fas fa-flask"></i> Lab</a>
+                        <a href="https://github.com/yukitobiswa" target="_blank" rel="noopener"><i
+                                class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="profile" class="profile">
-            <h1>Profile</h1>
-            <div class="profile-list">
-                <div class="profile-item">
-                    <div class="profile-text">
-                        <h3>About Me</h3>
-                        <p>Nice to meet you. I'm Yuki Tobisawa. Born on January 8, 2004. At university, I am researching the field of service computing.</p>
-                        <p>In addition, I have experience with long-term internships and team development projects.</p>
+        <section id="profile" class="section-block">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-icon"><i class="fas fa-user"></i></span>
+                    <h2>Profile</h2>
+                </div>
+
+                <div class="profile-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-id-card"></i>
+                            <h3>About Me</h3>
+                        </div>
+                        <p>Hi, I'm Yuki Tobisawa, born on January 8, 2004. I'm from Hokkaido!</p>
+                        <p>At university, I conduct research in the field of service computing.</p>
+                        <p>Outside of academics, I have been involved in long-term internships and team development projects.</p>
                     </div>
 
-                    <div class="profile-text">
-                        <h3>Hobbies & Interests</h3>
-                        <ul>
-                            <li>Weight Training</li>
-                            <li>Eating</li>
-                            <li>Traveling</li>
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-heart"></i>
+                            <h3>Hobbies &amp; Interests</h3>
+                        </div>
+                        <ul class="hobby-list">
+                            <li><i class="fas fa-dumbbell"></i> Working Out</li>
+                            <li><i class="fas fa-utensils"></i> Food</li>
+                            <li><i class="fas fa-plane"></i> Traveling</li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
         </section>
 
-        <section id="research" class="research">
-            <div class="research-top">
-                <h2>Research</h2>
-            </div>
-
-            <div class="research-title">
-                <p>Web Service Composition by LLM Multi-Agent</p>
-            </div>
-
-            <div class="research-flex">
-                <!-- First: Image left, text right -->
-                <div class="research-block img-left">
-                    <div class="research-image slide-in-left">
-                        <img src="image/API_en.png" alt="API Configuration Diagram">
-                    </div>
-                    <div class="research-text">
-                        <h3>Background</h3>
-                        <p>In recent years, Web services have become deeply integrated into our lives, and the construction of composite services by combining multiple Web services has become common for the purpose of improving development efficiency and creating new value.
-                            However, selecting services that meet the objectives from the vast number of Web services provided worldwide and combining them appropriately is extremely difficult with conventional manual work and human-dependent approaches.
-                            Furthermore, there are limitations to human judgment alone when considering service selection and combination that take into account interoperability and compatibility between services, QoS (Quality of
-                            Service), security, and reliability, as well as other non-functional requirements.
-                            Therefore, to efficiently and optimally construct composite services, technology that automatically supports service discovery, selection, and combination is necessary.
-                        </p>
-                    </div>
+        <section id="research" class="section-block section-alt">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-icon"><i class="fas fa-microscope"></i></span>
+                    <h2>Research</h2>
                 </div>
 
-                <!-- Second: Text left, image right -->
-                <div class="research-block img-right">
-                    <div class="research-image slide-in-right">
-                        <img src="image/multi_agent_en.png" alt="Multi-agent">
+                <div class="research-title-banner">
+                    <i class="fas fa-quote-left"></i>
+                    <span>Composite Service Recommendation via Multi-Agent System Using the Contract Net Protocol</span>
+                </div>
+
+                <div class="research-grid">
+                    <div class="card research-card">
+                        <div class="research-card-img">
+                            <img src="image/API.png" alt="API Architecture">
+                        </div>
+                        <div class="research-card-body">
+                            <h3><i class="fas fa-lightbulb"></i> Background</h3>
+                            <p>In recent years, composite services that combine multiple Web services (e.g., travel booking sites that offer flights, hotels, and maps in one place) have become widely used. However, selecting the right services from a vast number of options and combining them appropriately is extremely labor-intensive. Traditional approaches required users to describe their requirements using formal logic expressions, making it difficult for general users.
+                                Although the emergence of LLMs has addressed this challenge, recommending from a vast number of APIs with a single LLM leads to degraded inference accuracy due to context length limitations and prompt bloat. This research proposes a multi-agent cooperative system to solve this problem.</p>
+                            </p>
+                        </div>
                     </div>
-                    <div class="research-text">
-                        <h3>Recommendation by Multi-Agent</h3>
-                        <p>In this research, we use a multi-agent system to recommend Web services.
-                            In conventional service composition, users had to describe their objectives and requirements using formal logical expressions (temporal logic or predicate logic). This was a very difficult problem for users and a barrier to service composition.
-                            Therefore, we believed that by using a large language model (LLM) that can be described in natural language, users would be able to easily describe their requirements.
-                            However, in service composition by a single agent, the range of target services is extensive, so an LLM based on general knowledge tends to have a shallow understanding of specialized knowledge, and there is a problem of insufficient information regarding service technical specifications and execution environments. Although this problem can be partially improved by adding specialized knowledge to the prompt, as the number and complexity of services increase, new problems arise: prompt inflation and, as a result, character limits.
-                            In this research, to solve these problems, we introduce a multi-agent system composed of multiple LLM agents. By specializing each agent in a specific domain, we aim to alleviate prompt constraints and achieve more accurate service recommendations.
-                        </p>
+
+                    <div class="card research-card research-card-text-only">
+                        <div class="research-card-body">
+                            <h3><i class="fas fa-flask"></i> Research Details</h3>
+                            <p>This research proposes a system that leverages Large Language Models (LLMs) to automatically recommend appropriate Web service combinations based on user requirements written in natural language.</p>
+                            <p>Delegating everything to a single LLM causes accuracy degradation due to excessive information volume. Therefore, we constructed a multi-agent system where multiple LLM agents collaborate through role-based division of labor.</p>
+                            <p>We adopted the <strong>Contract Net Protocol (CNP)</strong> for inter-agent coordination. In this framework, a "Manager" issues tasks and "Contractors" bid on them based on their specialized domains. The Manager publishes user requirements, each Contractor proposes based on their expertise, and the Manager ultimately determines the optimal combination.</p>
+                            <p>After comparing three role-division approaches, the Manager-driven approach achieved the highest accuracy, outperforming the single-agent approach.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="works" class="works">
-            <div class="works-top">
-                <h1>Work</h1>
-            </div>
+        <section id="works" class="section-block">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-icon"><i class="fas fa-laptop-code"></i></span>
+                    <h2>Work</h2>
+                </div>
 
-            <h2>Diary Board</h2>
-            <div class="works-flex">
-                <div class="works-block img-right">
-                    <div class="works-image slide-in-right">
-                        <img src="image/diary_board.png" alt="Diary Board">
+                <div class="work-item">
+                    <div class="work-header">
+                        <h3>ShigaChat</h3>
+                        <span class="work-tag">Team Project</span>
+                        <span class="work-status-active">In use at Shiga International Association</span>
                     </div>
-                    <div class="works-description">
-                        <p>Diary Board is a multilingual educational support tool designed to prevent foreign children who have come to Japan involuntarily from becoming isolated in Japanese school settings.</p>
-                        <p>It aims to create an inclusive classroom environment by removing barriers caused by cultural backgrounds and language differences and promoting interaction among children.</p>
-                        <h3>Background</h3>
-                        <p>We actually visited the Shiga International Association and interviewed foreigners living in Shiga Prefecture and association staff about their concerns. Based on the issues that emerged, we conducted group development with the aim of resolving them through a Web service.
-                        </p>
-                        <h3>Features</h3>
-                        <p>Diary Board has the following features:</p>
+                    <div class="work-description-full card">
+                        <div class="work-image-full">
+                            <img src="image/Shigachat.png" alt="ShigaChat">
+                        </div>
+                        <p>Shiga Chat is a multilingual, restricted-access Q&amp;A service designed for staff at the Shiga International Association.</p>
+                        <p>By combining ChatGPT with Retrieval-Augmented Generation (RAG), it provides fast, region-specific answers to questions about daily life.
+                            For each user query, RAG searches and references an existing Q&amp;A database, passing the relevant text to ChatGPT, which then generates a natural-language response.</p>
+
+                        <div class="work-lang-badges">
+                            <span class="lang-badge">Japanese</span>
+                            <span class="lang-badge">English</span>
+                            <span class="lang-badge">Vietnamese</span>
+                            <span class="lang-badge">Chinese</span>
+                            <span class="lang-badge">Korean</span>
+                        </div>
+
+                        <h4><i class="fas fa-star"></i> Key Focus Areas</h4>
                         <ul>
-                            <li>Login</li>
-                            <li>Diary function</li>
-                            <li>Quiz function</li>
-                            <li>Group management function</li>
-                            <li>Usage promotion function</li>
+                            <li><strong>User Experience:</strong> Designed an intuitive flow from question submission to answer delivery. Prioritized screen transitions and operability to ensure usability for first-time foreign users.</li>
+                            <li><strong>Accuracy &amp; Safety:</strong> Built a curated Q&amp;A database to prevent ChatGPT hallucinations. Introduced manual content review and multilingual grammar checking.</li>
+                            <li><strong>Multilingual Support:</strong> Designed all core operations including notifications and search to be fully available in all supported languages, with cultural sensitivity in mind.</li>
                         </ul>
-                        <h3>URL</h3>
-                        <a href="https://si-lab.org/diaryboard/" target="_blank"
-                            rel="noopener">https://si-lab.org/diaryboard/</a>
+
+                        <h4><i class="fas fa-database"></i> Reference Q&amp;A Data</h4>
+                        <p><a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">Shiga International Association</a> Daily Life Consultation Q&amp;A</p>
+
+                    </div>
+                </div>
+
+                <div class="work-divider"></div>
+
+                <div class="work-item">
+                    <div class="work-header">
+                        <h3>Diary Board</h3>
+                        <span class="work-tag">Team Project</span>
+                    </div>
+                    <div class="work-description-full card">
+                        <div class="work-image-full">
+                            <img src="image/diary_board.png" alt="Diary Board">
+                        </div>
+                        <p>Diary Board is a multilingual educational support tool designed to prevent involuntary immigrant children from becoming isolated in Japanese schools.</p>
+                        <p>Through diary entries, students learn about the multicultural lives of foreign children, breaking down barriers caused by cultural and linguistic differences and fostering inclusive classroom communities.</p>
+
+                        <h4><i class="fas fa-star"></i> Key Focus Areas</h4>
+                        <ul>
+                            <li><strong>Encouraging Continued Use:</strong> Implemented ranking and achievement badge features to motivate students to keep writing diary entries.</li>
+                            <li><strong>Multilingual Learning Support:</strong> Added quiz features based on diary content, enabling students to learn languages in an engaging way.</li>
+                        </ul>
+
+                        <div class="work-links">
+                            <a href="https://si-lab.org/diaryboard/" target="_blank" rel="noopener"><i
+                                    class="fas fa-external-link-alt"></i> si-lab.org/diaryboard/</a>
+                            <span class="work-status">Currently offline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-divider"></div>
+
+                <div class="work-item">
+                    <div class="work-header">
+                        <h3>Long-Term Internship</h3>
+                        <span class="work-tag">Internship</span>
+                    </div>
+                    <div class="work-description-full card">
+
+                        <div class="work-links" style="margin-bottom: 4px;">
+                            <a href="https://markdoor.net/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> markdoor.net</a>
+                        </div>
+
+                        <h4><i class="fas fa-briefcase"></i> Roles</h4>
+                        <div class="role-list">
+                            <div class="role-item">
+                                <span class="role-chip"><i class="fas fa-layer-group"></i> Full-Stack Development</span>
+                                <p>End-to-end ownership of backend, frontend, and infrastructure design and implementation.</p>
+                            </div>
+                            <div class="role-item">
+                                <span class="role-chip"><i class="fas fa-handshake"></i> Technical Sales</span>
+                                <p>Created and presented live demos during client meetings to directly convey technical value.</p>
+                            </div>
+                            <div class="role-item">
+                                <span class="role-chip"><i class="fas fa-user-plus"></i> Intern Recruitment</span>
+                                <p>Conducted technical screening and interviews for engineering intern candidates.</p>
+                            </div>
+                        </div>
+
+                        <h4><i class="fas fa-rocket"></i> Development Achievements</h4>
+                        <div class="achievement-grid">
+                            <div class="achievement-card">
+                                <h5><i class="fas fa-robot"></i> Full Automation of Office Tasks via AI</h5>
+                                <p>Combined AI agents with RAG, OCR, and Embedding to fully automate clerical tasks such as invoice processing and DB registration, handling notation variations and irregularities like a human.</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h5><i class="fas fa-search"></i> AI-Powered Internal Search System</h5>
+                                <p>AI searches internal documents across departments and responds to natural language queries. Automated knowledge sharing previously dependent on senior employees, significantly reducing search time.</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h5><i class="fas fa-file-alt"></i> AI &times; OCR Document Digitization</h5>
+                                <p>AI analyzes OCR-extracted text with contextual understanding, handling notation variations and irregular formats. Automates the entire pipeline from document processing to database registration.</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h5><i class="fas fa-chart-line"></i> Demand Forecasting</h5>
+                                <p>Predicted and analyzed historical sales data using machine learning models to automatically calculate shipment volumes.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="section-block section-alt">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-icon"><i class="fas fa-code"></i></span>
+                    <h2>Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-badge">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fab fa-js"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills">
-            <div class="skills-top">
-                <h1>Skills</h1>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <p>&copy; 2025 Yuki Tobisawa. All rights reserved.</p>
             </div>
-
-            <div class="skills-list">
-                <div class="skills-item">
-                    <div class="skills-text">
-                        <h3>Python</h3>
-                        <h3>Java</h3>
-                        <h3>HTML</h3>
-                        <h3>CSS</h3>
-                        <h3>JavaScript</h3>
-                        <h3>SQL</h3>
-                        <h3>Docker</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </footer>
 
     </div>
 
     <script src="script.js"></script>
 </body>
 
-</html> 
+</html>
