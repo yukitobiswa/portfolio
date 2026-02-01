@@ -64,24 +64,23 @@
                 <div class="profile-cards">
                     <div class="card">
                         <div class="card-header">
-                            <i class="fas fa-id-card"></i>
-                            <h3>自己紹介</h3>
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>経歴</h3>
                         </div>
-                        <p>はじめまして、飛澤佑季です。2004年1月8日生まれ。北海道出身です！</p>
-                        <p>大学では、サービスコンピューティングの分野に関して研究しています。</p>
-                        <p>その他では、長期インターンやチーム開発などを行ってきました。</p>
+                        <ul class="timeline-list">
+                            <li><span class="timeline-year">2019 – 2022</span>立命館慶祥高等学校</li>
+                            <li><span class="timeline-year">2022 – 2026</span>立命館大学 情報理工学部</li>
+                            <li><span class="timeline-year">2026 –</span>立命館大学大学院 情報理工学研究科</li>
+                        </ul>
                     </div>
 
                     <div class="card">
                         <div class="card-header">
-                            <i class="fas fa-heart"></i>
-                            <h3>趣味・好きなもの</h3>
+                            <i class="fas fa-id-card"></i>
+                            <h3>自己紹介</h3>
                         </div>
-                        <ul class="hobby-list">
-                            <li><i class="fas fa-dumbbell"></i> 筋トレ</li>
-                            <li><i class="fas fa-utensils"></i> ご飯</li>
-                            <li><i class="fas fa-plane"></i> 旅行</li>
-                        </ul>
+                        <p>北海道出身で、高校時代はラグビー部に所属していました。大学ではサービスコンピューティングの分野で研究を行っています。学外ではAI受託開発企業にて長期インターンに取り組んでいます。</p>
+                        <p>趣味は筋トレと旅行で、ご飯を食べるのも好きです！</p>
                     </div>
                 </div>
             </div>
@@ -132,65 +131,80 @@
                     <h2>Work</h2>
                 </div>
 
-                <div class="work-item">
-                    <div class="work-header">
-                        <h3>ShigaChat</h3>
-                        <span class="work-tag">Team Project</span>
-                        <span class="work-status-active">滋賀国際協会にて運用中</span>
-                    </div>
-                    <div class="work-description-full card">
-                        <div class="work-image-full">
-                            <img src="image/Shigachat.png" alt="ShigaChat">
+                <div class="work-grid-two">
+                    <div class="work-item">
+                        <div class="work-header">
+                            <h3>ShigaChat</h3>
+                            <span class="work-tag">Team Project</span>
+                            <span class="work-status-active">滋賀国際協会にて運用中</span>
                         </div>
-                        <p>Shiga Chatは、滋賀国際協会の職員を対象とした多言語対応の限定公開Q&amp;Aサービスです。</p>
-                        <p>ChatGPTと検索拡張生成（RAG）を組み合わせることで、日常生活に関する質問に対して、迅速かつ地域特化の回答を提供します。
-                            ユーザの質問に対し、RAGは関連する既存のQ&amp;Aデータベースを検索・参照し、ChatGPTにテキストを渡します。渡されたテキストをChatGPTが自然な形で回答生成し、ユーザに返します。</p>
+                        <div class="work-description-full card">
+                            <div class="work-image-full">
+                                <img src="image/Shigachat.png" alt="ShigaChat">
+                            </div>
+                            <p>Shiga Chatは、滋賀国際協会の職員を対象とした多言語対応の限定公開Q&amp;Aサービスです。</p>
 
-                        <div class="work-lang-badges">
-                            <span class="lang-badge">日本語</span>
-                            <span class="lang-badge">English</span>
-                            <span class="lang-badge">Tiếng Việt</span>
-                            <span class="lang-badge">中文</span>
-                            <span class="lang-badge">한국어</span>
+                            <div class="work-details" hidden>
+                                <p>研究室内の活動の一環で開発されました。活動終了後でも運用に至るまで実装をし、実際に滋賀国際協会内で運用中です。</p>
+                                <p>ChatGPTと検索拡張生成（RAG）を組み合わせることで、日常生活に関する質問に対して、迅速かつ地域特化の回答を提供します。
+                                    ユーザの質問に対し、RAGは関連する既存のQ&amp;Aデータベースを検索・参照し、ChatGPTにテキストを渡します。渡されたテキストをChatGPTが自然な形で回答生成し、ユーザに返します。</p>
+
+                                <div class="work-lang-badges">
+                                    <span class="lang-badge">日本語</span>
+                                    <span class="lang-badge">English</span>
+                                    <span class="lang-badge">Tiếng Việt</span>
+                                    <span class="lang-badge">中文</span>
+                                    <span class="lang-badge">한국어</span>
+                                </div>
+
+                                <h4><i class="fas fa-star"></i> こだわった点</h4>
+                                <ul>
+                                    <li><strong>ユーザ体験の向上：</strong>質問の投稿から回答までの流れを直感的に設計。画面遷移や操作性に配慮し、初めて使う外国人ユーザでも使いやすいUIを意識。</li>
+                                    <li><strong>情報の正確性と安全性：</strong>ChatGPTの誤回答（ハルシネーション）を防ぐため、回答の元となるQ&amp;Aデータベースを構築。また、人手による内容チェック、多言語対応の文法チェックを導入。</li>
+                                    <li><strong>多言語対応：</strong>通知や検索などの基本操作が全対応言語で可能なように設計し、多文化に配慮。</li>
+                                </ul>
+
+                                <h4><i class="fas fa-database"></i> 参照Q&amp;Aデータ</h4>
+                                <p>公益財団法人<a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">滋賀県国際協会</a> 生活相談Q&amp;A</p>
+                            </div>
+
+                            <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                            </button>
                         </div>
-
-                        <h4><i class="fas fa-star"></i> こだわった点</h4>
-                        <ul>
-                            <li><strong>ユーザ体験の向上：</strong>質問の投稿から回答までの流れを直感的に設計。画面遷移や操作性に配慮し、初めて使う外国人ユーザでも使いやすいUIを意識。</li>
-                            <li><strong>情報の正確性と安全性：</strong>ChatGPTの誤回答（ハルシネーション）を防ぐため、回答の元となるQ&amp;Aデータベースを構築。また、人手による内容チェック、多言語対応の文法チェックを導入。</li>
-                            <li><strong>多言語対応：</strong>通知や検索などの基本操作が全対応言語で可能なように設計し、多文化に配慮。</li>
-                        </ul>
-
-                        <h4><i class="fas fa-database"></i> 参照Q&amp;Aデータ</h4>
-                        <p>公益財団法人<a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">滋賀県国際協会</a> 生活相談Q&amp;A</p>
-
                     </div>
-                </div>
 
-                <div class="work-divider"></div>
-
-                <div class="work-item">
-                    <div class="work-header">
-                        <h3>Diary Board</h3>
-                        <span class="work-tag">Team Project</span>
-                    </div>
-                    <div class="work-description-full card">
-                        <div class="work-image-full">
-                            <img src="image/diary_board.png" alt="Diary Board">
+                    <div class="work-item">
+                        <div class="work-header">
+                            <h3>Diary Board</h3>
+                            <span class="work-tag">Team Project</span>
                         </div>
-                        <p>Diary Boardは、非自発的に来日した外国人児童が、日本の学校現場で孤立しないように設計された多言語対応の教育支援ツールです。</p>
-                        <p>日記を通じて外国人児童の過ごす多文化を知り、文化的背景や言語の違いによる障壁を取り除きます。そして児童同士の交流を促進することで、包摂的な学級づくりを支援します。</p>
+                        <div class="work-description-full card">
+                            <div class="work-image-full">
+                                <img src="image/diary_board.png" alt="Diary Board">
+                            </div>
+                            <p>Diary Boardは、非自発的に来日した外国人児童が、日本の学校現場で孤立しないように設計された多言語対応の教育支援ツールです。</p>
 
-                        <h4><i class="fas fa-star"></i> こだわった点</h4>
-                        <ul>
-                            <li><strong>継続利用の促進：</strong>日記を継続的に書いてもらうために、ランキング機能や称号機能を実装。</li>
-                            <li><strong>多言語学習支援：</strong>日記の内容に関するクイズ機能を追加し、楽しみながら言語学習できる仕組みを提供。</li>
-                        </ul>
+                            <div class="work-details" hidden>
+                                <p>研究室内の活動の一環で滋賀国際協会へ訪問し、課題をヒアリングする中でこのシステムを開発しました。</p>
+                                <p>日記を通じて外国人児童の過ごす多文化を知り、文化的背景や言語の違いによる障壁を取り除きます。そして児童同士の交流を促進することで、包摂的な学級づくりを支援します。</p>
 
-                        <div class="work-links">
-                            <a href="https://si-lab.org/diaryboard/" target="_blank" rel="noopener"><i
-                                    class="fas fa-external-link-alt"></i> si-lab.org/diaryboard/</a>
-                            <span class="work-status">現在サイト閉鎖中</span>
+                                <h4><i class="fas fa-star"></i> こだわった点</h4>
+                                <ul>
+                                    <li><strong>継続利用の促進：</strong>日記を継続的に書いてもらうために、ランキング機能や称号機能を実装。</li>
+                                    <li><strong>多言語学習支援：</strong>日記の内容に関するクイズ機能を追加し、楽しみながら言語学習できる仕組みを提供。</li>
+                                </ul>
+
+                                <div class="work-links">
+                                    <a href="https://si-lab.org/diaryboard/" target="_blank" rel="noopener"><i
+                                            class="fas fa-external-link-alt"></i> si-lab.org/diaryboard/</a>
+                                    <span class="work-status">現在サイト閉鎖中</span>
+                                </div>
+                            </div>
+
+                            <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

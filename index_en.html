@@ -63,24 +63,23 @@
                 <div class="profile-cards">
                     <div class="card">
                         <div class="card-header">
-                            <i class="fas fa-id-card"></i>
-                            <h3>About Me</h3>
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
                         </div>
-                        <p>Hi, I'm Yuki Tobisawa, born on January 8, 2004. I'm from Hokkaido!</p>
-                        <p>At university, I conduct research in the field of service computing.</p>
-                        <p>Outside of academics, I have been involved in long-term internships and team development projects.</p>
+                        <ul class="timeline-list">
+                            <li><span class="timeline-year">2019 – 2022</span>Ritsumeikan Keisho Senior High School</li>
+                            <li><span class="timeline-year">2022 – 2026</span>Ritsumeikan University, College of Information Science and Engineering</li>
+                            <li><span class="timeline-year">2026 –</span>Ritsumeikan University, Graduate School of Information Science and Engineering</li>
+                        </ul>
                     </div>
 
                     <div class="card">
                         <div class="card-header">
-                            <i class="fas fa-heart"></i>
-                            <h3>Hobbies &amp; Interests</h3>
+                            <i class="fas fa-id-card"></i>
+                            <h3>About Me</h3>
                         </div>
-                        <ul class="hobby-list">
-                            <li><i class="fas fa-dumbbell"></i> Working Out</li>
-                            <li><i class="fas fa-utensils"></i> Food</li>
-                            <li><i class="fas fa-plane"></i> Traveling</li>
-                        </ul>
+                        <p>Originally from Hokkaido, I played rugby throughout high school. At university, I conduct research in the field of service computing. Outside of academics, I work as a long-term intern at an AI development company.</p>
+                        <p>In my free time, I enjoy working out, traveling, and exploring good food.</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +100,7 @@
                 <div class="research-grid">
                     <div class="card research-card">
                         <div class="research-card-img">
-                            <img src="image/API.png" alt="API Architecture">
+                            <img src="image/API_en.png" alt="API Architecture">
                         </div>
                         <div class="research-card-body">
                             <h3><i class="fas fa-lightbulb"></i> Background</h3>
@@ -131,65 +130,80 @@
                     <h2>Work</h2>
                 </div>
 
-                <div class="work-item">
-                    <div class="work-header">
-                        <h3>ShigaChat</h3>
-                        <span class="work-tag">Team Project</span>
-                        <span class="work-status-active">In use at Shiga International Association</span>
-                    </div>
-                    <div class="work-description-full card">
-                        <div class="work-image-full">
-                            <img src="image/Shigachat.png" alt="ShigaChat">
+                <div class="work-grid-two">
+                    <div class="work-item">
+                        <div class="work-header">
+                            <h3>ShigaChat</h3>
+                            <span class="work-tag">Team Project</span>
+                            <span class="work-status-active">In use at Shiga International Association</span>
                         </div>
-                        <p>Shiga Chat is a multilingual, restricted-access Q&amp;A service designed for staff at the Shiga International Association.</p>
-                        <p>By combining ChatGPT with Retrieval-Augmented Generation (RAG), it provides fast, region-specific answers to questions about daily life.
-                            For each user query, RAG searches and references an existing Q&amp;A database, passing the relevant text to ChatGPT, which then generates a natural-language response.</p>
+                        <div class="work-description-full card">
+                            <div class="work-image-full">
+                                <img src="image/Shigachat.png" alt="ShigaChat">
+                            </div>
+                            <p>Shiga Chat is a multilingual, restricted-access Q&amp;A service designed for staff at the Shiga International Association.</p>
 
-                        <div class="work-lang-badges">
-                            <span class="lang-badge">Japanese</span>
-                            <span class="lang-badge">English</span>
-                            <span class="lang-badge">Vietnamese</span>
-                            <span class="lang-badge">Chinese</span>
-                            <span class="lang-badge">Korean</span>
+                            <div class="work-details" hidden>
+                                <p>Developed as part of our research lab's activities. We continued implementation through to deployment, and it is currently in operation at the Shiga International Association.</p>
+                                <p>By combining ChatGPT with Retrieval-Augmented Generation (RAG), it provides fast, region-specific answers to questions about daily life.
+                                    For each user query, RAG searches and references an existing Q&amp;A database, passing the relevant text to ChatGPT, which then generates a natural-language response.</p>
+
+                                <div class="work-lang-badges">
+                                    <span class="lang-badge">Japanese</span>
+                                    <span class="lang-badge">English</span>
+                                    <span class="lang-badge">Vietnamese</span>
+                                    <span class="lang-badge">Chinese</span>
+                                    <span class="lang-badge">Korean</span>
+                                </div>
+
+                                <h4><i class="fas fa-star"></i> Key Focus Areas</h4>
+                                <ul>
+                                    <li><strong>User Experience:</strong> Designed an intuitive flow from question submission to answer delivery. Prioritized screen transitions and operability to ensure usability for first-time foreign users.</li>
+                                    <li><strong>Accuracy &amp; Safety:</strong> Built a curated Q&amp;A database to prevent ChatGPT hallucinations. Introduced manual content review and multilingual grammar checking.</li>
+                                    <li><strong>Multilingual Support:</strong> Designed all core operations including notifications and search to be fully available in all supported languages, with cultural sensitivity in mind.</li>
+                                </ul>
+
+                                <h4><i class="fas fa-database"></i> Reference Q&amp;A Data</h4>
+                                <p><a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">Shiga International Association</a> Daily Life Consultation Q&amp;A</p>
+                            </div>
+
+                            <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                            </button>
                         </div>
-
-                        <h4><i class="fas fa-star"></i> Key Focus Areas</h4>
-                        <ul>
-                            <li><strong>User Experience:</strong> Designed an intuitive flow from question submission to answer delivery. Prioritized screen transitions and operability to ensure usability for first-time foreign users.</li>
-                            <li><strong>Accuracy &amp; Safety:</strong> Built a curated Q&amp;A database to prevent ChatGPT hallucinations. Introduced manual content review and multilingual grammar checking.</li>
-                            <li><strong>Multilingual Support:</strong> Designed all core operations including notifications and search to be fully available in all supported languages, with cultural sensitivity in mind.</li>
-                        </ul>
-
-                        <h4><i class="fas fa-database"></i> Reference Q&amp;A Data</h4>
-                        <p><a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">Shiga International Association</a> Daily Life Consultation Q&amp;A</p>
-
                     </div>
-                </div>
 
-                <div class="work-divider"></div>
-
-                <div class="work-item">
-                    <div class="work-header">
-                        <h3>Diary Board</h3>
-                        <span class="work-tag">Team Project</span>
-                    </div>
-                    <div class="work-description-full card">
-                        <div class="work-image-full">
-                            <img src="image/diary_board.png" alt="Diary Board">
+                    <div class="work-item">
+                        <div class="work-header">
+                            <h3>Diary Board</h3>
+                            <span class="work-tag">Team Project</span>
                         </div>
-                        <p>Diary Board is a multilingual educational support tool designed to prevent involuntary immigrant children from becoming isolated in Japanese schools.</p>
-                        <p>Through diary entries, students learn about the multicultural lives of foreign children, breaking down barriers caused by cultural and linguistic differences and fostering inclusive classroom communities.</p>
+                        <div class="work-description-full card">
+                            <div class="work-image-full">
+                                <img src="image/diary_board.png" alt="Diary Board">
+                            </div>
+                            <p>Diary Board is a multilingual educational support tool designed to prevent involuntary immigrant children from becoming isolated in Japanese schools.</p>
 
-                        <h4><i class="fas fa-star"></i> Key Focus Areas</h4>
-                        <ul>
-                            <li><strong>Encouraging Continued Use:</strong> Implemented ranking and achievement badge features to motivate students to keep writing diary entries.</li>
-                            <li><strong>Multilingual Learning Support:</strong> Added quiz features based on diary content, enabling students to learn languages in an engaging way.</li>
-                        </ul>
+                            <div class="work-details" hidden>
+                                <p>This system was developed as part of our research lab's activities, through visits to the Shiga International Association where we identified their challenges through interviews.</p>
+                                <p>Through diary entries, students learn about the multicultural lives of foreign children, breaking down barriers caused by cultural and linguistic differences and fostering inclusive classroom communities.</p>
 
-                        <div class="work-links">
-                            <a href="https://si-lab.org/diaryboard/" target="_blank" rel="noopener"><i
-                                    class="fas fa-external-link-alt"></i> si-lab.org/diaryboard/</a>
-                            <span class="work-status">Currently offline</span>
+                                <h4><i class="fas fa-star"></i> Key Focus Areas</h4>
+                                <ul>
+                                    <li><strong>Encouraging Continued Use:</strong> Implemented ranking and achievement badge features to motivate students to keep writing diary entries.</li>
+                                    <li><strong>Multilingual Learning Support:</strong> Added quiz features based on diary content, enabling students to learn languages in an engaging way.</li>
+                                </ul>
+
+                                <div class="work-links">
+                                    <a href="https://si-lab.org/diaryboard/" target="_blank" rel="noopener"><i
+                                            class="fas fa-external-link-alt"></i> si-lab.org/diaryboard/</a>
+                                    <span class="work-status">Currently offline</span>
+                                </div>
+                            </div>
+
+                            <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

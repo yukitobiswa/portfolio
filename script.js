@@ -69,3 +69,18 @@ function updateActiveNav() {
 }
 
 document.addEventListener('scroll', updateActiveNav);
+
+// Learn More toggle
+function toggleDetails(btn) {
+  const details = btn.parentElement.querySelector('.work-details');
+  const isHidden = details.hasAttribute('hidden');
+  if (isHidden) {
+    details.removeAttribute('hidden');
+    btn.classList.add('active');
+    btn.querySelector('span').textContent = 'Close';
+  } else {
+    details.setAttribute('hidden', '');
+    btn.classList.remove('active');
+    btn.querySelector('span').textContent = 'Learn More';
+  }
+}

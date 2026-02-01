@@ -34,7 +34,7 @@
     --radius-sm: 10px;
     --radius-xs: 6px;
 
-    --container: 960px;
+    --container: 1100px;
     --px: clamp(20px, 5vw, 48px);
     --section-gap: clamp(56px, 8vw, 80px);
 
@@ -544,6 +544,30 @@ img {
     margin: 0;
 }
 
+.timeline-list {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-list li {
+    padding: 10px 0;
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
+.timeline-list li + li {
+    border-top: 1px solid var(--border-light);
+}
+
+.timeline-year {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 2px;
+}
+
 .hobby-list {
     list-style: none;
     padding: 0;
@@ -603,15 +627,15 @@ img {
 
 .research-card {
     display: flex;
-    gap: 24px;
-    align-items: flex-start;
+    gap: 16px;
+    align-items: center;
     padding: 0;
     overflow: hidden;
 }
 
 .research-card-img {
-    flex: 0 0 42%;
-    max-width: 42%;
+    flex: 0 0 48%;
+    max-width: 48%;
 }
 
 .research-card-img img {
@@ -657,6 +681,26 @@ img {
 /* --------------------------
    Works
    -------------------------- */
+
+.work-grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.work-grid-two .work-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-grid-two .work-description-full {
+    flex: 1;
+}
+
+.work-grid-two .work-image-full img {
+    width: 80%;
+}
 
 .work-item {
     margin-top: 0;
@@ -804,6 +848,48 @@ img {
     .work-status {
         background: var(--surface-raised);
     }
+}
+
+/* --------------------------
+   Work: Learn More toggle
+   -------------------------- */
+
+.work-details[hidden] {
+    display: none;
+}
+
+.work-details {
+    margin-top: 12px;
+}
+
+.btn-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-learn-more:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-learn-more i {
+    font-size: 11px;
+    transition: transform 0.3s;
+}
+
+.btn-learn-more.active i {
+    transform: rotate(180deg);
 }
 
 /* --------------------------
@@ -1175,6 +1261,14 @@ li code {
 
     .research-card-body {
         padding: 20px;
+    }
+
+    .work-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .work-grid-two .work-image-full img {
+        width: 60%;
     }
 
     .work-content {
