@@ -67,7 +67,6 @@
                             <h3>Education</h3>
                         </div>
                         <ul class="timeline-list">
-                            <li><span class="timeline-year">2019 – 2022</span>Ritsumeikan Keisho Senior High School</li>
                             <li><span class="timeline-year">2022 – 2026</span>Ritsumeikan University, College of Information Science and Engineering</li>
                             <li><span class="timeline-year">2026 –</span>Ritsumeikan University, Graduate School of Information Science and Engineering</li>
                         </ul>
@@ -98,25 +97,21 @@
                 </div>
 
                 <div class="research-grid">
-                    <div class="card research-card">
-                        <div class="research-card-img">
-                            <img src="image/API_en.png" alt="API Architecture">
-                        </div>
+                    <div class="card research-card research-card-text-only">
                         <div class="research-card-body">
-                            <h3><i class="fas fa-lightbulb"></i> Background</h3>
-                            <p>In recent years, composite services that combine multiple Web services (e.g., travel booking sites that offer flights, hotels, and maps in one place) have become widely used. However, selecting the right services from a vast number of options and combining them appropriately is extremely labor-intensive. Traditional approaches required users to describe their requirements using formal logic expressions, making it difficult for general users.
-                                Although the emergence of LLMs has addressed this challenge, recommending from a vast number of APIs with a single LLM leads to degraded inference accuracy due to context length limitations and prompt bloat. This research proposes a multi-agent cooperative system to solve this problem.</p>
-                            </p>
+                            <h3><i class="fas fa-lightbulb"></i> Overview</h3>
+                            <p>This research proposes a composite service recommendation system that uses Large Language Models (LLMs) to recommend appropriate combinations of Web services from user requirements written in natural language. Composite services such as travel booking platforms are widely used, but selecting suitable APIs from a large number of candidates and combining them correctly is still labor-intensive.</p>
+                            <p>Traditional approaches required users to express their needs in formal logic, which made them difficult for general users to handle. LLMs made natural-language input possible, but relying on a single LLM for a large API space leads to degraded inference accuracy because of context-length limitations and prompt bloat.</p>
+                            <p>To address this, we built a multi-agent system in which multiple LLM agents collaborate through role-based division of labor. We adopted the <strong>Contract Net Protocol (CNP)</strong> for coordination: a Manager publishes the user request, Contractors make proposals based on their specialties, and the Manager selects the final service composition. Comparing three role-allocation strategies showed that the Manager-driven approach achieved the best accuracy and outperformed the single-agent baseline.</p>
                         </div>
                     </div>
 
-                    <div class="card research-card research-card-text-only">
+                    <div class="card research-card research-card-text-only research-slide-card">
                         <div class="research-card-body">
-                            <h3><i class="fas fa-flask"></i> Research Details</h3>
-                            <p>This research proposes a system that leverages Large Language Models (LLMs) to automatically recommend appropriate Web service combinations based on user requirements written in natural language.</p>
-                            <p>Delegating everything to a single LLM causes accuracy degradation due to excessive information volume. Therefore, we constructed a multi-agent system where multiple LLM agents collaborate through role-based division of labor.</p>
-                            <p>We adopted the <strong>Contract Net Protocol (CNP)</strong> for inter-agent coordination. In this framework, a "Manager" issues tasks and "Contractors" bid on them based on their specialized domains. The Manager publishes user requirements, each Contractor proposes based on their expertise, and the Manager ultimately determines the optimal combination.</p>
-                            <p>After comparing three role-division approaches, the Manager-driven approach achieved the highest accuracy, outperforming the single-agent approach.</p>
+                            <h3><i class="fas fa-file-pdf"></i> Presentation Slides</h3>
+                            <p class="research-note">IEICE / IPSJ General Conference 2026 presentation material</p>
+                            <p>You can browse the presentation material in a slide-like viewer below.</p>
+                            <div class="pdf-container" data-image-prefix="image/icice-slides/icice-" data-page-count="10" data-image-ext="jpg" data-page-pad="2"></div>
                         </div>
                     </div>
                 </div>
@@ -167,9 +162,12 @@
                                 <p><a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">Shiga International Association</a> Daily Life Consultation Q&amp;A</p>
                             </div>
 
-                            <button class="btn-learn-more" onclick="toggleDetails(this)">
-                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-                            </button>
+                            <div class="work-actions">
+                                <span class="btn-git btn-git-private"><i class="fab fa-github"></i> Private</span>
+                                <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                    <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -201,9 +199,14 @@
                                 </div>
                             </div>
 
-                            <button class="btn-learn-more" onclick="toggleDetails(this)">
-                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-                            </button>
+                            <div class="work-actions">
+                                <a class="btn-git" href="https://github.com/yukitobiswa/diary_board" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i> Git
+                                </a>
+                                <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                    <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,6 +217,7 @@
                     <div class="work-header">
                         <h3>Long-Term Internship</h3>
                         <span class="work-tag">Internship</span>
+                        <span class="work-period">Apr 2025 - Present</span>
                     </div>
                     <div class="work-description-full card">
 
@@ -253,7 +257,7 @@
                             </div>
                             <div class="achievement-card">
                                 <h5><i class="fas fa-chart-line"></i> Demand Forecasting</h5>
-                                <p>Predicted and analyzed historical sales data using machine learning models to automatically calculate shipment volumes.</p>
+                                <p>Built demand forecasting models for retail chains, food wholesalers, and industrial component manufacturers using not only time-series data such as sales and shipment volumes but also external factors including weather, temperature, weekdays and holidays, promotional campaigns, and local events.</p>
                             </div>
                         </div>
 

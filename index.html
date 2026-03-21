@@ -68,7 +68,6 @@
                             <h3>経歴</h3>
                         </div>
                         <ul class="timeline-list">
-                            <li><span class="timeline-year">2019 – 2022</span>立命館慶祥高等学校</li>
                             <li><span class="timeline-year">2022 – 2026</span>立命館大学 情報理工学部</li>
                             <li><span class="timeline-year">2026 –</span>立命館大学大学院 情報理工学研究科</li>
                         </ul>
@@ -95,29 +94,22 @@
 
                 <div class="research-title-banner">
                     <i class="fas fa-quote-left"></i>
-                    <span>契約ネットプロトコルを用いたマルチエージェントシステムによる複合サービス推薦</span>
+                    <span>契約ネットプロトコルに基づくLLMマルチエージェントシステムによる複合サービス推薦</span>
                 </div>
 
                 <div class="research-grid">
-                    <div class="card research-card">
-                        <div class="research-card-img">
-                            <img src="image/API.png" alt="API構成図">
-                        </div>
+                    <div class="card research-card research-card-text-only">
                         <div class="research-card-body">
-                            <h3><i class="fas fa-lightbulb"></i> 背景</h3>
-                            <p>近年、複数のWebサービスを組み合わせた複合サービス（例：旅行予約サイトで航空券・ホテル・地図を一括提供）が広く利用されている。しかし、膨大なWebサービスの中から目的に合ったものを選び出し、適切に組み合わせることは非常に手間がかかる。従来の手法ではユーザーが専門的な論理式で要求を記述する必要があり、一般ユーザーには扱いづらいという課題があった。
-                                しかし近年LLMの登場によりその課題は解決されたたが、膨大な数のAPIを単一のLLMで推薦するとコンテキスト長制限・プロンプト肥大化により推論精度が低下する問題がある。そこで本研究ではマルチエージェントで協力し合うシステムを提案する。</p>
-                            </p>
+                            <h3><i class="fas fa-lightbulb"></i> 概要</h3>
+                            <p>自然言語要件から複合サービスを構成するAPI選択は，サービス自動合成の重要課題である．既存のLLM単一エージェント手法は，API数増加に伴うプロンプト長の線形増大により，コンテキスト長制限や推論精度低下のスケーラビリティ問題を抱える．本論文では，各APIの仕様を個別のコントラクタエージェントに分散保持させ，契約ネットプロトコル（CNP）に基づく入札により推薦を行うマルチエージェント型手法を提案する．さらに，コア機能分解・カテゴリマッピング・APIマッチング・API選択の推論過程を個別タスクとして外在化し，その分担方式（マネージャ主導型・コントラクタ主導型・協調型）が推薦性能に与える影響を比較する．ProgrammableWebデータセットによる評価の結果，マネージャ主導方式が最も安定的に高精度を示し，推論タスクの分担設計が精度とコストのバランスを決定することを明らかにした．</p>
                         </div>
                     </div>
 
-                    <div class="card research-card research-card-text-only">
+                    <div class="card research-card research-card-text-only research-slide-card">
                         <div class="research-card-body">
-                            <h3><i class="fas fa-flask"></i> 研究内容</h3>
-                            <p>本研究では、大規模言語モデル（LLM）を活用し、自然言語で書かれたユーザーの要求から適切なWebサービスの組み合わせを自動で推薦するシステムを提案した。</p>
-                            <p>単一のLLMに全てを任せると、扱う情報量が多すぎて精度が低下する問題がある。そこで、複数のLLMエージェントが役割分担して協力するマルチエージェントシステムを構築した。</p>
-                            <p>エージェント間の協調には<strong>契約ネットプロトコル（CNP）</strong>を採用した。これは、仕事を発注する「マネージャ」と、仕事を受注する「コントラクタ」が入札形式でタスクを分担する仕組みである。マネージャがユーザー要求を公開し、各コントラクタが自分の専門領域に基づいて提案を行い、最終的にマネージャが最適な組み合わせを決定する。</p>
-                            <p>3種類の役割分担方式を比較した結果、マネージャ主導で進める方式が最も高い精度を達成し、単一エージェント方式を上回る性能を示した。</p>
+                            <h3><i class="fas fa-file-pdf"></i> 発表スライド</h3>
+                            <p class="research-note">電気通信情報処理学会総合大会2026発表資料</p>
+                            <div class="pdf-container" data-image-prefix="image/icice-slides/icice-" data-page-count="10" data-image-ext="jpg" data-page-pad="2"></div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +160,12 @@
                                 <p>公益財団法人<a href="https://www.s-i-a.or.jp/qa" target="_blank" rel="noopener">滋賀県国際協会</a> 生活相談Q&amp;A</p>
                             </div>
 
-                            <button class="btn-learn-more" onclick="toggleDetails(this)">
-                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-                            </button>
+                            <div class="work-actions">
+                                <span class="btn-git btn-git-private"><i class="fab fa-github"></i> Private</span>
+                                <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                    <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -202,9 +197,14 @@
                                 </div>
                             </div>
 
-                            <button class="btn-learn-more" onclick="toggleDetails(this)">
-                                <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-                            </button>
+                            <div class="work-actions">
+                                <a class="btn-git" href="https://github.com/yukitobiswa/diary_board" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i> Git
+                                </a>
+                                <button class="btn-learn-more" onclick="toggleDetails(this)">
+                                    <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,6 +215,7 @@
                     <div class="work-header">
                         <h3>長期インターン</h3>
                         <span class="work-tag">Internship</span>
+                        <span class="work-period">2025年4月 - 現在</span>
                     </div>
                     <div class="work-description-full card">
 
@@ -254,7 +255,7 @@
                             </div>
                             <div class="achievement-card">
                                 <h5><i class="fas fa-chart-line"></i> 需要予測</h5>
-                                <p>過去の販売実績を機械学習モデルで予測・分析し出荷量を自動算出。</p>
+                                <p>小売チェーン、食品卸、産業機器部品メーカーなどを対象に、販売数・出荷量などの時系列データに加え、天候、気温、曜日・祝日、販促施策、地域イベントといった外部要因も用いた需要予測モデルを構築。</p>
                             </div>
                         </div>
 
